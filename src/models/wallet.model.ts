@@ -26,10 +26,22 @@ export const WalletModel = sequelize.define<Wallet>(
         user_id: {
             type: DataType.UUID,
             allowNull: false,
+            references: {
+                model: 'User',
+                key: 'user_id',
+            },
+            onUpdate: 'CASCADE',
+            onDelete: 'RESTRICT',
         },
         currency_id: {
             type: DataType.UUID,
             allowNull: false,
+            references: {
+                model: 'Currency',
+                key: 'currency_id',
+            },
+            onUpdate: 'CASCADE',
+            onDelete: 'RESTRICT',
         },
         wallet_address: {
             type: DataType.STRING,
@@ -58,14 +70,14 @@ export const WalletModel = sequelize.define<Wallet>(
     }
 )
 
-WalletModel.belongsTo(UserModel, {
-    foreignKey: 'user_id',
-    as: 'user'
-})
+// WalletModel.belongsTo(UserModel, {
+//     foreignKey: 'user_id',
+//     as: 'user'
+// })
 
-WalletModel.belongsTo(CurrencyModel, {
-    foreignKey: 'currency_id',
-    as: 'currency'
-})
+// WalletModel.belongsTo(CurrencyModel, {
+//     foreignKey: 'currency_id',
+//     as: 'currency'
+// })
 
-WalletModel.sync({ alter: true }).then(() => console.log("Wallet table created!"))
+// WalletModel.sync({ alter: true }).then(() => console.log("Wallet table created!"))

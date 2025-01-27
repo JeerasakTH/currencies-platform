@@ -74,14 +74,14 @@ export const TransactionModel = sequelize.define<Transaction>(
     }
 )
 
-TransactionModel.belongsTo(WalletModel, {
-    foreignKey: 'from_wallet_id',
-    as: 'FromWallet'
-})
+// TransactionModel.belongsTo(WalletModel, {
+//     foreignKey: 'from_wallet_id',
+//     as: 'FromWallet'
+// })
 
-TransactionModel.belongsTo(WalletModel, {
-    foreignKey: 'to_wallet_id',
-    as: 'ToWallet'
-})
+// TransactionModel.belongsTo(WalletModel, {
+//     foreignKey: 'to_wallet_id',
+//     as: 'ToWallet'
+// })
 
-Transaction.sync({ alter: true }).then(() => console.log("Transaction table created!"))
+// TransactionModel.sync({ alter: true }).then(() => console.log("Transaction table created!"))

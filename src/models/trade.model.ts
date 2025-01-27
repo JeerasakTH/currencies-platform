@@ -61,14 +61,14 @@ export const TradeModel = sequelize.define<Trade>(
     }
 )
 
-TradeModel.belongsTo(OrderModel, {
-    foreignKey: "BuyOrder",
-    as: "buy_order_id"
-})
+// TradeModel.belongsTo(OrderModel, {
+//     foreignKey: "BuyOrder",
+//     as: "buy_order_id"
+// })
 
-TradeModel.belongsTo(OrderModel, {
-    foreignKey: "SellOrder",
-    as: "sell_order_id"
-})
+// TradeModel.belongsTo(OrderModel, {
+//     foreignKey: "SellOrder",
+//     as: "sell_order_id"
+// })
 
-TradeModel.sync({ alter: true }).then(() => console.log("TradeModel table created!"))
+// TradeModel.sync({ alter: true }).then(() => console.log("TradeModel table created!"))

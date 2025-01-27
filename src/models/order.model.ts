@@ -67,14 +67,14 @@ export const OrderModel = sequelize.define<Order>(
     }
 )
 
-OrderModel.belongsTo(UserModel, {
-    foreignKey: "user_id",
-    as: "user"
-})
+// OrderModel.belongsTo(UserModel, {
+//     foreignKey: "user_id",
+//     as: "user"
+// })
 
-OrderModel.belongsTo(CurrencyModel, {
-    foreignKey: "currency_id",
-    as: "currency"
-})
+// OrderModel.belongsTo(CurrencyModel, {
+//     foreignKey: "currency_id",
+//     as: "currency"
+// })
 
-OrderModel.sync({ alter: true }).then(() => console.log("Order table created!"))
+// OrderModel.sync({ alter: true }).then(() => console.log("Order table created!"))

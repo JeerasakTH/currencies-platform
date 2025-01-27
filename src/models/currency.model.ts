@@ -75,4 +75,4 @@ export const CurrencyModel = sequelize.define<Currency>(
     }
 )
 
-Currency.sync({ alter: true }).then(() => console.log("Currency table created!"))
+// CurrencyModel.sync({ alter: true }).then(() => console.log("Currency table created!"))

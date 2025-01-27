@@ -1,6 +1,7 @@
 import { Model } from 'sequelize'
 import { DataType } from 'sequelize-typescript'
 import { sequelize } from "../utils/database"
+import { WalletModel } from './wallet.model'
 
 export class User extends Model {
     user_id!: string    // PK
@@ -77,4 +78,9 @@ export const UserModel = sequelize.define<User>(
     }
 )
 
-UserModel.sync({ alter: true }).then(() => console.log("User table created!"))
+// UserModel.hasMany(WalletModel, {
+//     foreignKey: 'user_id', // Foreign Key ที่ใช้ใน WalletModel
+//     as: 'wallets',         // Alias สำหรับความสัมพันธ์นี้
+// });
+
+// UserModel.sync({ alter: true }).then(() => console.log("User table created!"))
