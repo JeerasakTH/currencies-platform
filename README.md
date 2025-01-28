@@ -1,6 +1,6 @@
 # currencies-platform
 
-ขั้นตอนการใช้งาน Project
+## ขั้นตอนการใช้งาน Project
 
 1. ติดตั้ง PostgreSQL สร้าง User และ Password ให้เรียบร้อย
 2. ทำการ clone project ลงที่เครื่อง
@@ -11,7 +11,13 @@
 
 หมายเหตุ ไม่ได้ ignore .env file ไว้เนื่องจากต้องใช้สำหรับเป็น config สำหรับ project
 
-ความหมายของแต่ละ Table
+## Route สำหรับใช้ในการทดสอบ
+
+- localhost:3001/api/v1/user
+- localhost:3001/api/v1/wallet
+- localhost:3001/api/v1/currency
+
+## ความหมายของแต่ละ Table
 
 - USER: บัญชีผู้ใช้งาน
 - CURRENCY: สกุลเงินดิจิทัลหรือเงิน Fiat ที่รองรับ
